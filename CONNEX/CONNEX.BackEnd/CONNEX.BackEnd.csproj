@@ -23,7 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\CONNEX.ClassLibraries\CONNEX.ClassLibraries.csproj" />
+    <ProjectReference Include="..\CONNEX.Data\CONNEX.Data.csproj" />
   </ItemGroup>
 
 </Project>

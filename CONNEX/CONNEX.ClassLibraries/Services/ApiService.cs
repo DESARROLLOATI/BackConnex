@@ -1,5 +1,5 @@
-﻿using CONNEX.ClassLibraries.Interfaces;
-using CONNEX.ClassLibraries.Responses;
+﻿using CONNEX.ClassLibraries.Responses;
+using CONNEX.Data.Services;
 using Newtonsoft.Json;
 using System.Text;
 
@@ -26,7 +26,7 @@ namespace CONNEX.ClassLibraries.Services
                 {
                     return new ActionResponse<T>
                     {
-                        IsSuccess = false,
+                        WasSuccess = false,
                         Message = response.StatusCode.ToString(),
                     };
                 }
@@ -36,7 +36,7 @@ namespace CONNEX.ClassLibraries.Services
 
                 return new ActionResponse<T>
                 {
-                    IsSuccess = true,
+                    WasSuccess = true,
                     Message = "Correcto",
                     Result = newRecord,
                 };
@@ -45,7 +45,7 @@ namespace CONNEX.ClassLibraries.Services
             {
                 return new ActionResponse<T>
                 {
-                    IsSuccess = false,
+                    WasSuccess = false,
                     Message = ex.Message,
                 };
             }
@@ -64,7 +64,7 @@ namespace CONNEX.ClassLibraries.Services
                 {
                     return new ActionResponse<T>
                     {
-                        IsSuccess = false,
+                        WasSuccess = false,
                         Message = response.StatusCode.ToString(),
                     };
                 }
@@ -74,7 +74,7 @@ namespace CONNEX.ClassLibraries.Services
 
                 return new ActionResponse<T>
                 {
-                    IsSuccess = true,
+                    WasSuccess = true,
                     Message = "Correcto",
                     Result = newRecord,
                 };
@@ -83,7 +83,7 @@ namespace CONNEX.ClassLibraries.Services
             {
                 return new ActionResponse<T>
                 {
-                    IsSuccess = false,
+                    WasSuccess = false,
                     Message = ex.Message,
                 };
             }
