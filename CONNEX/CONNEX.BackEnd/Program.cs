@@ -2,10 +2,7 @@ using Alfondoque.BackEnd.Repositories.Implementations;
 using Alfondoque.BackEnd.UnitsOfWork.Implementations;
 using CONNEX.BackEnd.Repositories.Interfaces;
 using CONNEX.BackEnd.UnitsOfWork.Interfaces;
-using CONNEX.Data.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Azure.Cosmos;
 using Microsoft.IdentityModel.Tokens;
 using System.Text.Json.Serialization;
 using System.Text;
@@ -74,23 +71,6 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 });
-
-builder.Services.AddIdentity<User, IdentityRole>(x =>
-{
-    x.Tokens.AuthenticatorTokenProvider = TokenOptions.DefaultAuthenticatorProvider;
-    x.SignIn.RequireConfirmedEmail = true;
-    x.User.RequireUniqueEmail = true;
-    x.Password.RequireDigit = false;
-    x.Password.RequiredUniqueChars = 0;
-    x.Password.RequireLowercase = false;
-    x.Password.RequireNonAlphanumeric = false;
-    x.Password.RequireUppercase = false;
-    x.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
-    x.Lockout.MaxFailedAccessAttempts = 3;
-    x.Lockout.AllowedForNewUsers = true;
-})
-    .AddEntityFrameworkStores<MasterDataContext>()
-    .AddDefaultTokenProviders();
 
 builder.Services.AddAuthentication(options =>
 {
