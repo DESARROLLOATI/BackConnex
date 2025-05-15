@@ -1,5 +1,5 @@
 ﻿using CONNEX.ClassLibraries.Responses;
-using CONNEX.Dtos;
+using CONNEX.Dtos.SearchDtos;
 
 namespace CONNEX.BackEnd.Repositories.Interfaces
 {

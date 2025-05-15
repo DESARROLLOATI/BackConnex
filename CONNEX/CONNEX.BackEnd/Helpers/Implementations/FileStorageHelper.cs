@@ -1,8 +1,8 @@
-﻿using CONNEX.ClassLibraries.Interfaces;
-using Azure.Storage.Blobs;
+﻿using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
+using CONNEX.BackEnd.Helpers.Interfaces;
 
-namespace CONNEX.API.Helpers.Implementations
+namespace CONNEX.BackEnd.Helpers.Implementations
 {
     public class FileStorageHelper : IFileStorageHelper
     {

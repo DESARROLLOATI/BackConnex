@@ -2,7 +2,7 @@
 using CONNEX.ClassLibraries.Helpers;
 using CONNEX.ClassLibraries.Responses;
 using CONNEX.Data.Entities;
-using CONNEX.Dtos;
+using CONNEX.Dtos.SearchDtos;
 using Microsoft.EntityFrameworkCore;
 
 namespace Alfondoque.BackEnd.Repositories.Implementations

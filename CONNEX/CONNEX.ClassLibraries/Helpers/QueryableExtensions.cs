@@ -1,4 +1,4 @@
-﻿using CONNEX.Dtos;
+﻿using CONNEX.Dtos.SearchDtos;
 using Microsoft.EntityFrameworkCore;
 
 namespace CONNEX.ClassLibraries.Helpers

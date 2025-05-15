@@ -1,13 +1,18 @@
-﻿namespace CONNEX.ClassLibraries.Entities.WorkOrders
-{
-    using CONNEX.ClassLibraries.Interfaces;
-    using System.ComponentModel.DataAnnotations;
+﻿using CONNEX.ClassLibraries.Interfaces;
+using System.ComponentModel.DataAnnotations;
+
+namespace CONNEX.ClassLibraries.Entities.WorkOrders
+{ 
 
     public class WorkOrder : IEntityDelete
     {
         [Key]
         [Display(Name = "Id")]
         public Guid Id { get; set; } = Guid.NewGuid();
+
+        [Display(Name = "Usuario")]
+        [Required(ErrorMessage = "El campo {0} es obligatorio.")]
+        public Guid WorkOrderUserId { get; set; }
 
         [Display(Name = "Codigo")]
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
@@ -28,6 +33,8 @@
         [Display(Name = "Estado")]
         public Guid WorkOrderStatusId { get; set; } 
         public WorkOrderStatus? WorkOrderStatus { get; set; } = null;
+        public ICollection<WorkOrderObservation>? Observations { get; set; } = null!;
 
+        
     }
 }

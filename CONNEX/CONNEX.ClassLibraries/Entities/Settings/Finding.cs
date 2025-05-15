@@ -6,7 +6,7 @@ namespace CONNEX.ClassLibraries.Entities.Settings
     /// <summary>
     /// Hallazgos del reporte
     /// </summary>
-    public class Discovery : IEntityDelete
+    public class Finding : IEntityDelete
     {
         [Key]
         [Display(Name = "Id")]

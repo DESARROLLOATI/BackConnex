@@ -1,4 +1,4 @@
-﻿namespace CONNEX.Dtos
+﻿namespace CONNEX.Dtos.SearchDtos
 {
     public class PaginationDTO
     {

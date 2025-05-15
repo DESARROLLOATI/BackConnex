@@ -1,4 +1,5 @@
-﻿using CONNEX.ClassLibraries.Interfaces;
+﻿using CONNEX.ClassLibraries.Entities.Settings;
+using CONNEX.ClassLibraries.Interfaces;
 using System.ComponentModel.DataAnnotations;
 
 namespace CONNEX.ClassLibraries.Entities.OperationReports
@@ -17,7 +18,7 @@ namespace CONNEX.ClassLibraries.Entities.OperationReports
         [Display(Name = "Tipo de lectura")]
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         public Guid ReadingTypeId { get; set; }
-        public OperationReport? ReadingType { get; set; } = null!;
+        public ReadingType? ReadingType { get; set; } = null!;
 
         [Display(Name = "Valor")]
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]

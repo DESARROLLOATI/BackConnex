@@ -1,7 +1,7 @@
 ﻿using CONNEX.BackEnd.Repositories.Interfaces;
 using CONNEX.BackEnd.UnitsOfWork.Interfaces;
 using CONNEX.ClassLibraries.Responses;
-using CONNEX.Dtos;
+using CONNEX.Dtos.SearchDtos;
 
 namespace Alfondoque.BackEnd.UnitsOfWork.Implementations
 {

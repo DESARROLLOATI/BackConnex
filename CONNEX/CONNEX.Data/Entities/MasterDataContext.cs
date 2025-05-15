@@ -32,7 +32,7 @@ namespace CONNEX.Data.Entities
 
         #region Settings
         public DbSet<CustomerType> CustomerTypes { get; set; }
-        public DbSet<Discovery> Discoveries { get; set; }
+        public DbSet<Finding> Findings { get; set; }
         public DbSet<EconomicActivity> EconomicActivities { get; set; }
         public DbSet<Novelty> Novelties { get; set; }
         public DbSet<ReadingType> ReadingTypes { get; set; }
@@ -46,7 +46,9 @@ namespace CONNEX.Data.Entities
         public DbSet<WorkOrderData> WorkOrderData { get; set; }
         public DbSet<WorkOrderObservation> WorkOrderObservations { get; set; }
         public DbSet<WorkOrderStatus> WorkOrderStatus { get; set; }
-        public DbSet<WorkOrderType> WorkOrderTypes { get; set; } 
+        public DbSet<WorkOrderType> WorkOrderTypes { get; set; }
+
+        public DbSet<WorkOrderTemporal> WorkOrderTemporals { get; set; }
         #endregion
 
 
@@ -81,8 +83,8 @@ namespace CONNEX.Data.Entities
             #region Settings
             modelBuilder.Entity<CustomerType>()
                     .ToContainer("CustomerTypes");
-            modelBuilder.Entity<Discovery>()
-                    .ToContainer("Discoveries");
+            modelBuilder.Entity<Finding>()
+                    .ToContainer("Findings");
             modelBuilder.Entity<EconomicActivity>()
                     .ToContainer("EconomicActivities");
             modelBuilder.Entity<Novelty>()
@@ -103,7 +105,9 @@ namespace CONNEX.Data.Entities
             modelBuilder.Entity<WorkOrderStatus>()
                 .ToContainer("WorkOrderStatus");
             modelBuilder.Entity<WorkOrderType>()
-                .ToContainer("WorkOrderTypes"); 
+                .ToContainer("WorkOrderTypes");
+            modelBuilder.Entity<WorkOrderTemporal>()
+               .ToContainer("WorkOrderTemporals");
             #endregion
 
             // Deshabilitar eliminación en cascada

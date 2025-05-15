@@ -1,4 +1,4 @@
-﻿namespace CONNEX.ClassLibraries.Interfaces
+﻿namespace CONNEX.BackEnd.Helpers.Interfaces
 {
     public interface IFileStorageHelper
     {

@@ -1,5 +1,5 @@
 ﻿using CONNEX.BackEnd.UnitsOfWork.Interfaces;
-using CONNEX.Dtos;
+using CONNEX.Dtos.SearchDtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CONNEX.BackEnd.Controllers

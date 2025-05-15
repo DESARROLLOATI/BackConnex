@@ -1,6 +1,6 @@
 ﻿using CONNEX.ClassLibraries.Responses;
 
-namespace CONNEX.Data.Services
+namespace CONNEX.ClassLibraries.Services
 {
     public interface IApiService
     {
