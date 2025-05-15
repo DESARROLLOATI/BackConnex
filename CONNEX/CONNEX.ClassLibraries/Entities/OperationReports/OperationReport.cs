@@ -31,11 +31,7 @@ namespace CONNEX.ClassLibraries.Entities.OperationReports
 
         [Display(Name = "Novedad")]
         public Guid? NoveltyId { get; set; } = null;
-        public Novelty? Novelty { get; set; } = null!;
-
-        [Display(Name = "Hallazgo")]
-        public Guid? FindingId { get; set; } = null;
-        public Finding? Finding { get; set; } = null!;
+        public Novelty? Novelty { get; set; } = null!;     
 
         [Display(Name = "Usuario")]
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]

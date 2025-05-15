@@ -31,8 +31,7 @@ namespace CONNEX.Data.Entities
         #endregion
 
         #region Settings
-        public DbSet<CustomerType> CustomerTypes { get; set; }
-        public DbSet<Finding> Findings { get; set; }
+        public DbSet<CustomerType> CustomerTypes { get; set; }       
         public DbSet<EconomicActivity> EconomicActivities { get; set; }
         public DbSet<Novelty> Novelties { get; set; }
         public DbSet<ReadingType> ReadingTypes { get; set; }
@@ -82,9 +81,7 @@ namespace CONNEX.Data.Entities
 
             #region Settings
             modelBuilder.Entity<CustomerType>()
-                    .ToContainer("CustomerTypes");
-            modelBuilder.Entity<Finding>()
-                    .ToContainer("Findings");
+                    .ToContainer("CustomerTypes");            
             modelBuilder.Entity<EconomicActivity>()
                     .ToContainer("EconomicActivities");
             modelBuilder.Entity<Novelty>()
